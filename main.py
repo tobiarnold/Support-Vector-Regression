@@ -26,7 +26,7 @@ def main():
     with st.sidebar.subheader("Parameter"):
         kernel_select = st.sidebar.selectbox("kernel auswählen", options=["linear", "poly", "rbf"], index=2)
         C_select = st.sidebar.slider("C auswählen:", 1, 100000, 1000, 100)
-        epsilon_select = st.sidebar.slider("epsilon auswählen:", 0.1, 40000.0, 100, 0.1)
+        epsilon_select = st.sidebar.slider("epsilon auswählen:", 0.1, 40000.0, 100.0, 0.1)
     with st.sidebar.subheader("Vorhersage"):
         pred_salary= st.sidebar.slider("Für Gehaltsvorhersage Berufserfahrung auswählen:", 1.0, 10.0, 1.0, 0.1)
     #einlesen des Dataframes
