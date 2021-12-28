@@ -51,7 +51,7 @@ def main():
     plt.xlabel("Berufserfahrung in Jahren")
     plt.ylabel("Gehalt")
     ax.legend()
-    st.write(f)
+    st.pyplot(f)
     pred_salary=np.array([pred_salary]).reshape(1,-1)
     pred_salary_result=model.predict(pred_salary)
     st.write("Gehaltsvorhersage:", pred_salary_result)
