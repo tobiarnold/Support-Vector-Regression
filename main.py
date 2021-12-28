@@ -14,8 +14,9 @@ def main():
     st.write("Data Mining und Visual Analytics")
     st.write(
         "Im folgenden wird ein kleiner Datensatz bestehend aus Berufserfahrung in Jahren und dem jährlichen Gehalt geladen. "
-        "Anschließend wird mithilfe des Support Vector Regression Algorithmus der Datensatz analysiert und visualisiert."
-        "Über den Filter Links können die verschiedenen Parameter verändert werden.")
+        "Anschließend wird mithilfe des Support Vector Regression Algorithmus der Datensatz analysiert und visualisiert.")
+    st.write("Über den Filter auf der linken Seite können die verschiedenen Parameter verändert werden." 
+             "Bei mobilen Geräten ist der Filter standardmäßig ausgeblendet und lässt sich mit dem Pfeil oben links aktivieren.")
     link = "https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html"
     st.markdown(link, unsafe_allow_html=True)
     st.write("**Standardparameter: class sklearn.svm.SVR(*, kernel='rbf', degree=3, gamma='scale', coef0=0.0, tol=0.001, "
@@ -24,8 +25,8 @@ def main():
         split_size = st.sidebar.slider("Aufteilen in Traings- und Testdaten (Standard: 30% Testdaten):", 10, 90, 30, 5)
     with st.sidebar.subheader("Parameter"):
         kernel_select = st.sidebar.selectbox("kernel auswählen", options=["linear", "poly", "rbf"], index=2)
-        C_select = st.sidebar.slider("C auswählen:", 1, 100000, 1, 100)
-        epsilon_select = st.sidebar.slider("epsilon auswählen:", 0.1, 40000.0, 0.1, 0.1)
+        C_select = st.sidebar.slider("C auswählen:", 1, 100000, 1000, 100)
+        epsilon_select = st.sidebar.slider("epsilon auswählen:", 0.1, 40000.0, 100, 0.1)
     with st.sidebar.subheader("Vorhersage"):
         pred_salary= st.sidebar.slider("Für Gehaltsvorhersage Berufserfahrung auswählen:", 1.0, 10.0, 1.0, 0.1)
     #einlesen des Dataframes
