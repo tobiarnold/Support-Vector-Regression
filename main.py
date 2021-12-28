@@ -17,7 +17,7 @@ def main():
     st.write("Im folgenden wird ein kleiner Datensatz bestehend aus Berufserfahrung in Jahren und dem jährlichen Gehalt geladen. "
              "Anschließend wird mithilfe des Support Vector Regression Algorithmus der Datensatz analysiert und visualisiert.")
     st.write("Über den Filter auf der linken Seite können die verschiedenen Parameter verändert werden." 
-             "Bei mobilen Geräten ist der Filter standardmäßig ausgeblendet und lässt sich mit dem Pfeil oben links aktivieren.")
+             " Bei mobilen Geräten ist der Filter standardmäßig ausgeblendet und lässt sich mit dem Pfeil oben links aktivieren.")
     with st.sidebar.header("train_test_split"):
         split_size = st.sidebar.slider("Aufteilen in Traings- und Testdaten (Standard: 30% Testdaten):", 10, 90, 30, 5)
     with st.sidebar.subheader("Parameter"):
