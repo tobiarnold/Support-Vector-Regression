@@ -56,7 +56,7 @@ def main():
     pred_salary_result=model.predict(pred_salary)
     st.write("Gehaltsvorhersage:", pred_salary_result)
     link = "https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html"
-    st.text(link, unsafe_allow_html=True)
+    st.markdown(link, unsafe_allow_html=True)
     
 if __name__ == "__main__":
   main()
