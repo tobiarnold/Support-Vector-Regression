@@ -28,7 +28,7 @@ def main():
     with st.sidebar.subheader("Vorhersage"):
         pred_salary= st.sidebar.slider("Für Gehaltsvorhersage Berufserfahrung auswählen:", 1.0, 10.0, 1.0, 0.1)
     #einlesen des Dataframes
-    df=pd.read_csv(r"C:\Users\tobi\Downloads\Salary_Data.csv")
+    df=pd.read_csv(r"https://raw.githubusercontent.com/tobiarnold/Support-Vector-Regression/main/Salary_Data.csv")
     st.dataframe(df.style.format({"YearsExperience": "{:.1f}", "Salary": "{:.0f}"}), width=4000)
     #initalisieren der SVR
     X = df["YearsExperience"].to_numpy().reshape(-1, 1)
