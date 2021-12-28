@@ -12,20 +12,17 @@ def main():
     st.set_page_config(page_title="Support Vector Regression", page_icon="📈", layout="wide")
     st.title("📈 Support Vector Regression")
     st.write("Data Mining und Visual Analytics")
-    link = "https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html"
-    st.markdown(link, unsafe_allow_html=True)
     st.write("**Standardparameter: class sklearn.svm.SVR(*, kernel='rbf', degree=3, gamma='scale', coef0=0.0, tol=0.001, "
              "C=1.0, epsilon=0.1, shrinking=True, cache_size=200, verbose=False, max_iter=- 1)**")
-    st.write(
-        "Im folgenden wird ein kleiner Datensatz bestehend aus Berufserfahrung in Jahren und dem jährlichen Gehalt geladen. "
-        "Anschließend wird mithilfe des Support Vector Regression Algorithmus der Datensatz analysiert und visualisiert.")
+    st.write("Im folgenden wird ein kleiner Datensatz bestehend aus Berufserfahrung in Jahren und dem jährlichen Gehalt geladen. "
+             "Anschließend wird mithilfe des Support Vector Regression Algorithmus der Datensatz analysiert und visualisiert.")
     st.write("Über den Filter auf der linken Seite können die verschiedenen Parameter verändert werden." 
              "Bei mobilen Geräten ist der Filter standardmäßig ausgeblendet und lässt sich mit dem Pfeil oben links aktivieren.")
     with st.sidebar.header("train_test_split"):
         split_size = st.sidebar.slider("Aufteilen in Traings- und Testdaten (Standard: 30% Testdaten):", 10, 90, 30, 5)
     with st.sidebar.subheader("Parameter"):
         kernel_select = st.sidebar.selectbox("kernel auswählen", options=["linear", "poly", "rbf"], index=2)
-        C_select = st.sidebar.slider("C auswählen:", 1, 100000, 1000, 100)
+        C_select = st.sidebar.slider("C auswählen:", 1, 100000, 10000, 100)
         epsilon_select = st.sidebar.slider("epsilon auswählen:", 0.1, 40000.0, 100.0, 0.1)
     with st.sidebar.subheader("Vorhersage"):
         pred_salary= st.sidebar.slider("Für Gehaltsvorhersage Berufserfahrung auswählen:", 1.0, 10.0, 1.0, 0.1)
@@ -58,6 +55,8 @@ def main():
     pred_salary=np.array([pred_salary]).reshape(1,-1)
     pred_salary_result=model.predict(pred_salary)
     st.write("Gehaltsvorhersage:", pred_salary_result)
+    link = "https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html"
+    st.markdown(link, unsafe_allow_html=True)
     
 if __name__ == "__main__":
   main()
