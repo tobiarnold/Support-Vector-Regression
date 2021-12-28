@@ -14,7 +14,8 @@ def main():
     st.write("Data Mining und Visual Analytics")
     st.write(
         "Im folgenden wird ein kleiner Datensatz bestehend aus Berufserfahrung in Jahren und dem jährlichen Gehalt geladen. "
-        "Anschließend wird mithilfe des Support Vector Regression Algorithmus der Datensatz analysiert und visualisiert.")
+        "Anschließend wird mithilfe des Support Vector Regression Algorithmus der Datensatz analysiert und visualisiert."
+        "Über den Filter Links können die verschiedenen Parameter verändert werden.")
     link = "https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html"
     st.markdown(link, unsafe_allow_html=True)
     st.write("**Standardparameter: class sklearn.svm.SVR(*, kernel='rbf', degree=3, gamma='scale', coef0=0.0, tol=0.001, "
