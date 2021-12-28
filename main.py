@@ -55,8 +55,8 @@ def main():
     pred_salary=np.array([pred_salary]).reshape(1,-1)
     pred_salary_result=model.predict(pred_salary)
     st.write("Gehaltsvorhersage:", pred_salary_result)
-    link = "https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html"
-    st.markdown(link, unsafe_allow_html=True)
+    #link = "https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html"
+    #st.markdown(link, unsafe_allow_html=True)
     
 if __name__ == "__main__":
   main()
