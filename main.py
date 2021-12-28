@@ -43,7 +43,7 @@ def main():
     st.write("Trainingsdaten:",model_train)
     st.write("Testdaten:",model_test)
     #Diagramm
-    f, ax = plt.subplots(nrows=1, ncols=1)
+    f, ax = plt.subplots(nrows=1, ncols=1,figsize=(2, 2))
     ax.scatter(X,y, color="blue",label="Daten")
     ax.scatter(sc.inverse_transform(X_test), y_test, color="green", label="Testdaten")
     ax.scatter(X[model.support_],  y[model.support_], color="purple", label="Vektoren")
