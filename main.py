@@ -49,6 +49,7 @@ def main():
     ax.scatter(X[model.support_],  y[model.support_], color="purple", label="Vektoren")
     ax.plot(X, model.fit(X, y).predict(X), color="orange", label="Vorhersage")
     ax.plot(X, model.fit(X, y).predict(X)+epsilon_select, color="black",linestyle="dashed", label="epsilon")
+    ax.plot(X, model.fit(X, y).predict(X)-epsilon_select, color="black",linestyle="dashed", label="epsilon")
     plt.xlabel("Berufserfahrung in Jahren")
     plt.ylabel("Gehalt")
     ax.legend()
