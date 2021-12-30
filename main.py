@@ -42,6 +42,7 @@ def main():
     model_test=model.score(X_test, y_test)
     st.write("Score Trainingsdaten:",model_train)
     st.write("Score Testdaten:",model_test)
+    model.fit(X, y)
     #Diagramm
     f, ax = plt.subplots(nrows=1, ncols=1,figsize=(10, 5))
     ax.scatter(X,y, color="blue",label="Daten")
