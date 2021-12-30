@@ -54,7 +54,7 @@ def main():
     st.pyplot(f)
     pred_salary=np.array([pred_salary]).reshape(1,-1)
     pred_salary_result=model.predict(pred_salary)
-    st.write("Gehaltsvorhersage nach " pred_salary Jahren" :", pred_salary_result)
+    st.write("Gehaltsvorhersage nach", pred_salary Jahren," :", pred_salary_result)
     #link = "https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html"
     #st.markdown(link, unsafe_allow_html=True)
     
