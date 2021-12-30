@@ -40,8 +40,8 @@ def main():
     model.fit(X_train, y_train)
     model_train=model.score(X_train, y_train)
     model_test=model.score(X_test, y_test)
-    st.write("Trainingsdaten:",model_train)
-    st.write("Testdaten:",model_test)
+    st.write("Score Trainingsdaten:",model_train)
+    st.write("Score Testdaten:",model_test)
     #Diagramm
     f, ax = plt.subplots(nrows=1, ncols=1,figsize=(10, 5))
     ax.scatter(X,y, color="blue",label="Daten")
@@ -54,7 +54,7 @@ def main():
     st.pyplot(f)
     pred_salary=np.array([pred_salary]).reshape(1,-1)
     pred_salary_result=model.predict(pred_salary)
-    st.write("Gehaltsvorhersage:", pred_salary_result)
+    st.write("Gehaltsvorhersage nach " pred_salary Jahren" :", pred_salary_result)
     #link = "https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html"
     #st.markdown(link, unsafe_allow_html=True)
     
