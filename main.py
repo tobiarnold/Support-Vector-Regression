@@ -48,7 +48,7 @@ def main():
     ax.scatter(sc.inverse_transform(X_test), y_test, color="green", label="Testdaten")
     ax.scatter(X[model.support_],  y[model.support_], color="purple", label="Vektoren")
     ax.plot(X, model.fit(X, y).predict(X), color="orange", label="Vorhersage")
-    ax.plot(X, y=(model.fit(X, y).predict(X))+epsilon_select, color="black", label="Vorhersage")
+    ax.plot(X, model.fit(X, y).predict(X)+epsilon_select, color="black", label="Vorhersage")
     plt.xlabel("Berufserfahrung in Jahren")
     plt.ylabel("Gehalt")
     ax.legend()
