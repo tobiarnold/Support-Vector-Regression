@@ -25,7 +25,7 @@ def main():
         C_select = st.sidebar.slider("C auswählen:", 1, 100000, 10000, 100)
         epsilon_select = st.sidebar.slider("epsilon auswählen:", 0.1, 40000.0, 100.0, 0.1)
     with st.sidebar.subheader("Vorhersage"):
-        pred_salary= st.sidebar.slider("Für Gehaltsvorhersage Berufserfahrung auswählen:", 1.0, 10.0, 1.0, 0.1)
+        pred_salary= st.sidebar.slider("Für Gehaltsvorhersage Berufserfahrung auswählen:", 1.0, 20.0, 1.0, 0.1)
     #einlesen des Dataframes
     df=pd.read_csv(r"https://raw.githubusercontent.com/tobiarnold/Support-Vector-Regression/main/Salary_Data.csv")
     st.dataframe(df.style.format({"YearsExperience": "{:.1f}", "Salary": "{:.0f}"}), width=4000)
