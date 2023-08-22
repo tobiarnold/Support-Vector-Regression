@@ -5,8 +5,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVR
 import numpy as np
 import streamlit as st
-from streamlit import cli as stcli
-import sys
 
 def main():
     st.set_page_config(page_title="Support Vector Regression", page_icon="📈", layout="wide")
